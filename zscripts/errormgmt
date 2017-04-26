@@ -23,7 +23,7 @@ echo "\nRM NAME WITH HYPHEN"
 make ; sleep .1 ;  ./lem-in < ztestmaps/rmbadname.map
 echo "\nONE ROOM"
 make ; sleep .1 ;  ./lem-in < ztestmaps/oneroom.map
-echo "\nONLY START AND END"
+echo "\nONLY START AND END - THIS WORKS WITH NO ERROR"
 make ; sleep .1 ;  ./lem-in < ztestmaps/onlystartandend.map
 echo "\nNO LNKS"
 make ; sleep .1 ;  ./lem-in < ztestmaps/nolnks.map
