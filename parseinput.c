@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/19 09:14:31 by mgould            #+#    #+#             */
-/*   Updated: 2017/04/24 01:03:23 by mgould           ###   ########.fr       */
+/*   Updated: 2017/04/25 18:03:11 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 */
 
 /*
+** Throw error is # ants > INT
 ** Rooms can be separated by multiple spaces
 ** Room name can NOT start with an L
 ** Room names can NOT contain a '-' b/c undefined behavior for links

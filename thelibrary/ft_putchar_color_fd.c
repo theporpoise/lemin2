@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 14:29:52 by mgould            #+#    #+#             */
-/*   Updated: 2017/02/20 14:30:55 by mgould           ###   ########.fr       */
+/*   Updated: 2017/04/25 17:27:47 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@
 
 void	ft_putchar_color_fd(char c, int color, int fd)
 {
-	char *colors[] =
-	{RESET, CRED, CGRN, CYEL};
+	char *colors[];
 
+	colors[0] = RESET;
+	colors[1] = CRED;
+	colors[2] = CGRN;
+	colors[3] = CYEL;
 	ft_putstr_fd(colors[color], fd);
 	ft_putchar_fd(c, fd);
 	ft_putstr_fd(RESET, fd);
