@@ -15,3 +15,7 @@ echo "\nANTS > INT_MAX"
 make ; sleep 1 ;  ./lem-in < ztestmaps/noants.map
 echo "\nRM LNK NOT EXIST"
 make ; sleep 1 ;  ./lem-in < ztestmaps/rmlnknotexist.map
+echo "\nZERO ANTS"
+make ; sleep 1 ;  ./lem-in < ztestmaps/zeroants.map
+
+#make 10 more
