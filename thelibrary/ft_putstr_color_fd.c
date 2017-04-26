@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 14:01:59 by mgould            #+#    #+#             */
-/*   Updated: 2017/04/25 17:29:33 by mgould           ###   ########.fr       */
+/*   Updated: 2017/04/25 18:37:13 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 void	ft_putstr_color_fd(char *str, int color, int fd)
 {
-	char *colors[];
+	char *colors[4];
 
 	colors[0] = RESET;
 	colors[1] = CRED;

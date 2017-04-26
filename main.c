@@ -6,11 +6,13 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/05 18:30:33 by mgould            #+#    #+#             */
-/*   Updated: 2017/04/24 01:12:33 by mgould           ###   ########.fr       */
+/*   Updated: 2017/04/25 18:53:43 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <lemin.h>
+#include <stdio.h>
+//remove stdio.h
 
 static void	pathsandroutes(t_game *game)
 {
@@ -46,19 +48,42 @@ static void	mapandedges(t_game *game, int len)
 	int i;
 
 	i = 0;
+	if (game->map)
+	{
+		while ((game->map)[i])
+		{
+			free((game->map)[i]);
+			i++;
+		}
+		free(game->map);
+	}
+/*
 	while ((game->map)[i])
 	{
 		free((game->map)[i]);
 		i++;
 	}
 	free(game->map);
+*/
+	if (game->edge)
+	{
+		i = 0;
+		while (i <= len)
+		{
+			free((game->edge)[i]);
+			i++;
+		}
+		free(game->edge);
+	}
+	/*
 	i = 0;
 	while (i <= len)
 	{
 		free((game->edge)[i]);
 		i++;
 	}
-	free(game->edge);
+	*/
+	//free(game->edge);
 }
 
 static void	rmsandlsts(t_game *game)
@@ -97,6 +122,7 @@ static int	freethemalloc(t_game **gamepointer)
 		free(game);
 		return (0);
 	}
+	printf("one\n");
 	len = (game->rmlst)->id;
 	if (!(game->start) || !(game->end))
 	{
@@ -104,7 +130,9 @@ static int	freethemalloc(t_game **gamepointer)
 		free(game);
 		return (0);
 	}
+	printf("two\n");
 	rmsandlsts(game);
+	printf("three\n");
 	mapandedges(game, len);
 	pathsandroutes(game);
 	if (game->ant)

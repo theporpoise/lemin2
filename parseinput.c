@@ -6,11 +6,12 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/19 09:14:31 by mgould            #+#    #+#             */
-/*   Updated: 2017/04/25 18:03:11 by mgould           ###   ########.fr       */
+/*   Updated: 2017/04/25 18:39:26 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <lemin.h>
+#include <limits.h>
 
 /*
 ** PARSING NOTES
@@ -54,7 +55,9 @@ int	valantcount(char *ln, int *command, t_game *game)
 	else if (ft_isnbr(ln))
 	{
 		*command = 1;
-		if (ft_atoi(ln) < 1)
+		if (ps_big_atoi(ln) < 1)
+			return (0);
+		if (ps_big_atoi(ln) > INT_MAX)
 			return (0);
 		game->nbr = ft_atoi(ln);
 		return (1);
