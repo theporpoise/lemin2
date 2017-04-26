@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/05 18:30:33 by mgould            #+#    #+#             */
-/*   Updated: 2017/04/25 19:02:46 by mgould           ###   ########.fr       */
+/*   Updated: 2017/04/25 19:50:42 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,8 +89,10 @@ static void	rmsandlsts(t_game *game)
 		free((game->rmlst));
 		game->rmlst = rtmp;
 	}
-	free(game->lnlst);
-	free(game->rmlst);
+	if (game->lnlst)
+		free(game->lnlst);
+	if (game->rmlst)
+		free(game->rmlst);
 }
 
 static int	freethemalloc(t_game **gamepointer)
@@ -105,7 +107,6 @@ static int	freethemalloc(t_game **gamepointer)
 		free(game);
 		return (0);
 	}
-	//printf("one\n");
 	len = (game->rmlst)->id;
 	if (!(game->start) || !(game->end))
 	{
@@ -113,9 +114,7 @@ static int	freethemalloc(t_game **gamepointer)
 		free(game);
 		return (0);
 	}
-	//printf("two\n");
 	rmsandlsts(game);
-	//printf("three\n");
 	mapandedges(game, len);
 	pathsandroutes(game);
 	if (game->ant)
