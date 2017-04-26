@@ -6,7 +6,7 @@
 #    By: mgould <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/22 11:22:29 by mgould            #+#    #+#              #
-#    Updated: 2017/04/24 01:25:05 by mgould           ###   ########.fr        #
+#    Updated: 2017/04/26 14:19:21 by mgould           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,8 +27,11 @@ all: $(NAME1)
 $(NAME1): $(OBJCS) $(LIBA)
 	gcc $(CFLAGS) -o $@ $^
 
-$(LIBA):
+$(LIBA): force
 	cd $(LIB) && $(MAKE)
+
+force:
+	@true
 
 %.o: %.c
 	gcc $(CFLAGS) -c -o $@ $<
