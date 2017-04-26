@@ -21,5 +21,7 @@ echo "\nRM LNK NOT EXIST"
 make ; sleep .1 ;  ./lem-in < ztestmaps/rmlnknotexist1.map
 echo "\nRM NAME WITH HYPHEN"
 make ; sleep .1 ;  ./lem-in < ztestmaps/rmbadname.map
+echo "\nONLY START AND END"
+make ; sleep .1 ;  ./lem-in < ztestmaps/oneroom.map
 
 #make 10 more
