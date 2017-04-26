@@ -6,13 +6,11 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/05 18:30:33 by mgould            #+#    #+#             */
-/*   Updated: 2017/04/25 19:50:42 by mgould           ###   ########.fr       */
+/*   Updated: 2017/04/25 20:03:32 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <lemin.h>
-#include <stdio.h>
-//remove stdio.h
 
 static void	pathsandroutes(t_game *game)
 {

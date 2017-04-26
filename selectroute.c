@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/23 09:04:58 by mgould            #+#    #+#             */
-/*   Updated: 2017/04/25 19:07:47 by mgould           ###   ########.fr       */
+/*   Updated: 2017/04/25 20:03:15 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void		routecap(t_game *game)
 
 t_path		*selectroute(t_game *game)
 {
-	int 		i;
+	int			i;
 	static int	j;
 
 	if (j)
