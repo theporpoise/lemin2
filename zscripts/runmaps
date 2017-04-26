@@ -1,0 +1,14 @@
+#!/usr/bin/
+echo "\nexample map 1, one by one\n"
+make ; sleep 1 ;  ./lem-in < ztestmaps/example1.map
+echo "\nexample map example 0\n"
+make ; sleep 1 ;  ./lem-in < ztestmaps/example0.map
+echo "\nexample map example 2\n"
+make ; sleep 1 ;  ./lem-in < ztestmaps/example2.map
+echo "\ntestmaps 0 with 3 routes and lots of comments\n"
+make ; sleep 1 ;  ./lem-in < ztestmaps/testmap0.map
+echo "\nTWOROUTES\n"
+make ; sleep 2 ;  ./lem-in < ztestmaps/tworoutes.map
+#echo "\n100 NODES\n"
+#sleep 2
+#make ; sleep 1 ;  ./lem-in < ztestmaps/test100.out

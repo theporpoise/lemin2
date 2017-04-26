@@ -1,0 +1,17 @@
+#!/usr/bin/
+echo "\nNO ROOM"
+make ; sleep 1 ;  ./lem-in < ztestmaps/norooms.map
+echo "\nNO ANTS"
+make ; sleep 1 ;  ./lem-in < ztestmaps/noants.map
+echo "\nNO START"
+make ; sleep 1 ;  ./lem-in < ztestmaps/nostart.map
+echo "\nNO END"
+make ; sleep 1 ;  ./lem-in < ztestmaps/noend.map
+echo "\nNO START OR END"
+make ; sleep 1 ;  ./lem-in < ztestmaps/nostartorend.map
+echo "\nNO SOLUTION"
+make ; sleep 1 ;  ./lem-in < ztestmaps/nosolution.map
+echo "\nANTS > INT_MAX"
+make ; sleep 1 ;  ./lem-in < ztestmaps/noants.map
+echo "\nRM LNK NOT EXIST"
+make ; sleep 1 ;  ./lem-in < ztestmaps/rmlnknotexist.map
