@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/23 09:01:17 by mgould            #+#    #+#             */
-/*   Updated: 2017/04/23 23:01:34 by mgould           ###   ########.fr       */
+/*   Updated: 2017/04/25 19:09:09 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void		antmarch(t_game *game)
 	while (game->nbr)
 	{
 		route = selectroute(game);
-		while (route)
+		while (route && (game->nbr > 0))
 		{
 			nextant = makeant(route);
 			route = route->nx;
