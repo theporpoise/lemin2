@@ -27,3 +27,7 @@ echo "\nONLY START AND END - THIS WORKS WITH NO ERROR"
 make ; sleep .1 ;  ./lem-in < ztestmaps/onlystartandend.map
 echo "\nNO LNKS"
 make ; sleep .1 ;  ./lem-in < ztestmaps/nolnks.map
+echo "\nNEGATIVE ANTS"
+make ; sleep .1 ;  ./lem-in < ztestmaps/negativeants.map
+echo "\nROOMS WITH NAMES"
+make ; sleep .1 ;  ./lem-in < ztestmaps/roomswithnames.map
